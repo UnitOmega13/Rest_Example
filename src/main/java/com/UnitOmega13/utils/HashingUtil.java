@@ -1,4 +1,4 @@
-package com.UnitOmega13.demo.utils;
+package com.UnitOmega13.utils;
 
 import org.apache.log4j.Logger;
 

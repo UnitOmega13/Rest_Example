@@ -1,11 +1,10 @@
-package com.UnitOmega13.demo.controllers;
+package com.UnitOmega13.controllers;
 
-import com.UnitOmega13.demo.entity.User;
-import com.UnitOmega13.demo.service.UserService;
-import com.UnitOmega13.demo.utils.HashingUtil;
+import com.UnitOmega13.entity.User;
+import com.UnitOmega13.service.UserService;
+import com.UnitOmega13.utils.HashingUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

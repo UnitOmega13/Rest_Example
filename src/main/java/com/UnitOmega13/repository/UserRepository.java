@@ -1,6 +1,6 @@
-package com.UnitOmega13.demo.repository;
+package com.UnitOmega13.repository;
 
-import com.UnitOmega13.demo.entity.User;
+import com.UnitOmega13.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

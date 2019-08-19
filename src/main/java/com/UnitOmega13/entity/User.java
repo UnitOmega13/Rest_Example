@@ -1,4 +1,4 @@
-package com.UnitOmega13.demo.entity;
+package com.UnitOmega13.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

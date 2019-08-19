@@ -1,4 +1,4 @@
-package com.UnitOmega13.demo;
+package com.UnitOmega13;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

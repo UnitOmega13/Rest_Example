@@ -1,8 +1,8 @@
-package com.UnitOmega13.demo.service.Impl;
+package com.UnitOmega13.service.Impl;
 
-import com.UnitOmega13.demo.entity.User;
-import com.UnitOmega13.demo.repository.UserRepository;
-import com.UnitOmega13.demo.service.UserService;
+import com.UnitOmega13.entity.User;
+import com.UnitOmega13.repository.UserRepository;
+import com.UnitOmega13.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
