@@ -1,33 +1,20 @@
 package com.UnitOmega13.controllers;
 
 import com.UnitOmega13.entity.User;
-import com.UnitOmega13.service.UserService;
-import com.UnitOmega13.utils.HashingUtil;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
-import java.util.List;
-
-@Controller
-@RequestMapping("/admin/users")
+@RestController
 public class UsersController {
-    private UserService userService;
-
-    @Autowired
-    public UsersController(UserService userService) {
-        this.userService = userService;
-    }
-
-    @PostMapping(path = {"/all"})
-    public List<User> showAllUsers() {
-      return userService.getAll();
-    }
-
-    @PostMapping(path = {"/newUser"})
-    public User hashPassword(@RequestBody User user) {
-        user.setPassword(HashingUtil.hashPassword(user.getPassword()));
-        userService.add(user);
-        return user;
+    @GetMapping(path = {"/getUser"})
+    public User getUsers() {
+        RestTemplate restTemplate = new RestTemplate();
+        String url = "http://localhost:8080/newUser";
+        HttpEntity<User> request =
+                new HttpEntity<>(new User("user@user", "123456", "user"));
+        ResponseEntity<User> user = restTemplate.postForEntity(url, request, User.class);
+        return user.getBody();
     }
 }

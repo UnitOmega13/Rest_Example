@@ -1,35 +1,15 @@
 package com.UnitOmega13.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Column;
-
-@Entity
-@Table(name = "users", schema = "shop")
-@PrimaryKeyJoinColumn(name = "id")
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "userId")
     private Long id;
 
-    @Column(name = "email")
     private String email;
 
-    @Column(name = "login")
     private String login;
 
-    @Column(name = "password")
     private String password;
 
-    @Column(name = "accessRole")
     private String accessRole;
-
-    public User () {}
 
     public User(String email, String password, String login) {
         this.email = email;
