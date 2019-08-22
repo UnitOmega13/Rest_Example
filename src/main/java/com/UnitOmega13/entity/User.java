@@ -11,11 +11,6 @@ public class User {
 
     private String accessRole;
 
-    public User(String email, String password, String login) {
-        this.email = email;
-        this.password = password;
-        this.login = login;
-    }
 
     public User(String email, String password, String accessRole, String login) {
         this.email = email;
