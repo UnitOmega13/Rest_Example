@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @Service
 public class UserServiceInpl implements UserService {
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     @Autowired
     public UserServiceInpl(UserRepository userRepository){
@@ -30,35 +30,5 @@ public class UserServiceInpl implements UserService {
     @Override
     public List<User> getAll() {
         return userRepository.findAll();
-    }
-
-    @Transactional
-    @Override
-    public Optional<User> getUserById(long userID) {
-        return userRepository.findById(userID);
-    }
-
-    @Transactional
-    @Override
-    public Optional<User> getUserByEmail(String email) {
-        return userRepository.findByEmail(email);
-    }
-
-    @Transactional
-    @Override
-    public Optional<User> getUserByLogin(String login) {
-        return userRepository.findByLogin(login);
-    }
-
-    @Transactional
-    @Override
-    public void removeUser(long userID) {
-        userRepository.deleteById(userID);
-    }
-
-    @Transactional
-    @Override
-    public void update(User user) {
-        userRepository.save(user);
     }
 }

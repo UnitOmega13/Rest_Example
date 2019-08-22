@@ -14,7 +14,7 @@ import javax.persistence.Column;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "userId")
+    @Column(name = "user_id")
     private Long id;
 
     @Column(name = "email")
@@ -26,16 +26,8 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "accessRole")
+    @Column(name = "access_role")
     private String accessRole;
-
-    public User () {}
-
-    public User(String email, String password, String login) {
-        this.email = email;
-        this.password = password;
-        this.login = login;
-    }
 
     public User(String email, String password, String accessRole, String login) {
         this.email = email;
