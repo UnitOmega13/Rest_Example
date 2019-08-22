@@ -13,7 +13,7 @@ public class UsersController {
         RestTemplate restTemplate = new RestTemplate();
         final String url = "http://localhost:8080/new/User";
         HttpEntity<User> request =
-                new HttpEntity<>(new User("user@user", "123456", "user"));
+                new HttpEntity<>(new User("user@user", "123456", "user","user"));
         ResponseEntity<User> user = restTemplate.postForEntity(url, request, User.class);
         return user.getBody();
     }
